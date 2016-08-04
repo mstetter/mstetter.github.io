@@ -1,7 +1,0 @@
----
-title: "Markus Stetter"
----
-
-I am a Phd student, programmer and amaranth breeder. Here I would like to give you some insights into my different projects.
-
-![](own_images/DSC_0020.jpg)
