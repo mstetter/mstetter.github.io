@@ -1,0 +1,11 @@
+---
+title: "Publications"
+---
+## 2016
++ **Stetter MG**, Benz M and Ludewig U. Increased root hair density by loss of WRKY6 in Arabidopsis thaliana (2016) PeerJ preprints
++ **Stetter MG**, Mueller T and Schmid K, Incomplete domestication of South American grain amaranth (Amaranthus caudatus) from its wild relatives bioRxiv
++ **Stetter MG**, Zeitler L, Steinhaus A, Kroener K, Biljecki M and Schmid K. Crossing methods and cultivation conditions for rapid production of segregating populations in three grain amaranth species (2016) Front. Plant Sci. 7:816
+
+##2015
++ Vatter T, Neuhaeuser B, **Stetter MG** and Ludewig U, Regulation of length and density of Arabidopsis root hairs by ammonium and nitrate (2015) Journal of Plant Research 128,5:839-848
++ **Stetter MG**, Schmid K and Ludewig U, Uncovering Genes and Ploidy Involved in the High Diversity in Root Hair Density, Length and Response to Local Scarce Phosphate in Arabidopsis thaliana (2015) PloS one 10, 3:e0120604
