@@ -17,10 +17,13 @@ navbar:
     - text: "Publications"
       href: publications.html
       icon: ion-document-text
+    - text: "Contact"
+      href: contact.html
+      icon: ion-android-contact
 output_dir: "."
 output:
   html_document:
     theme: united
     highlight: textmate
     include:
-      after_body: footer.html
+ #     after_body: footer.html

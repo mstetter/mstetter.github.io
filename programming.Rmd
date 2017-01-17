@@ -2,7 +2,7 @@
 title: "Programming"
 ---
 
-While I am not a trained programmer, I started learning Python during my undergraduate studies. Since then I have been trying to improve and was interested in mobile app programming. I programm my apps in pyhton and kivy.
+While I am not a trained programmer, I started learning Python during my undergraduate studies. Since then I have been trying to improve and was interested in mobile app programming. I program my apps in python and kivy.
 
 ![](own_images/cover_full.JPG)
 

@@ -1,6 +1,9 @@
 ---
 title: "Science"
 ---
+My main interest is the population genetics of crop domestication
 
-Currently I am a PhD student in the group of Karl Schmid at the University of Hohenheim. There I study the domestication history of amaranth and try to elucidate the species relationship in the genus *Amaranthus*
+From February 2017 I will be a PostDoc the [Ross-Ibarra lab](http://www.rilab.org/) at the University of California Davis.
+
+I did my PhD in the group of [Karl Schmid](http://evoplant.uni-hohenheim.de) at the University of Hohenheim. There I studied the evolution of the genus *Amaranthus* and domestication history of amaranth. 
 
