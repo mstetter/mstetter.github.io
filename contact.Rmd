@@ -3,4 +3,6 @@ title: "Contact me"
 ---
 
 Markus Stetter   
-mgstetter@gmail.com  
+mail: mgstetter@gmail.com  
+twitter: [\@mgstetter](https://twitter.com/mgstetter)  
+web: [mstetter@github.io](mstetter@github.io)  
