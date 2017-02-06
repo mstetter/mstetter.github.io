@@ -6,3 +6,9 @@ Markus Stetter
 mail: mgstetter@gmail.com  
 twitter: [\@mgstetter](https://twitter.com/mgstetter)  
 web: [mstetter@github.io](mstetter@github.io)  
+
+<div style="width:200px">
+![](own_images/me_2016.jpg)
+</div>
+
+

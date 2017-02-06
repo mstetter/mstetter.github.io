@@ -1,9 +1,30 @@
 ---
 title: "Science"
 ---
-My main interest is the population genetics of crop domestication
+My main interest is the population genetics of crop domestication.
 
-From February 2017 I will be a PostDoc in the [Ross-Ibarra lab](http://www.rilab.org/) at the University of California Davis.
+Since February 2017 I am a postdoc in the [Ross-Ibarra lab](http://www.rilab.org/) at the University of California Davis.
 
 I did my PhD in the group of [Karl Schmid](http://evoplant.uni-hohenheim.de) at the University of Hohenheim. There I studied the evolution of the genus *Amaranthus* and domestication history of amaranth. 
 
+#  Domestication and adaptation in modern and ancient maize.
+
+Details coming soon
+
+# Domestication genomics of amaranth
+
+The genus Amaranthus comprises several crop species that are potentially only partially domesticated. Additionally, grain amaranth seeds have a high nutritional value and the crop has high potential to contribute to human nutrition in the future. Together, these characteristics make the genus, and in particular grain amaranth, interesting models to study domestication, genome evolution and breeding methods.
+
+![](own_images/hyp_genome_fastAnc_with_BM.png)
+
+Although grain amaranth has been cultivated for over 5,000 years and in the same regions as maize and other domesticated crops, the domestication syndrome is only weakly pronounced. Grain amaranth has tiny seeds that shatter and cultivated amaranth species do not have lower genetic diversity than their wild ancestors.
+Therefore, the genomic and phenotypic signatures of amaranth domestication differ from other, highly domesticated crops that originated from single domestication event. In contrast, the history of cultivated amaranth may include multiregional, multiple and incomplete domestication events with frequent and ongoing gene flow from sympatric relatives. 
+
+
+```{r,eval=FALSE,include=FALSE}
+<div style="width:300px">
+![](own_images/map_dom_scenario.png)
+</div>
+```
+
+![](own_images/map_dom_scenario.png)

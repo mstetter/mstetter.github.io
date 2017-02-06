@@ -13,4 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-WebsitePath: ~/Documents/my_personal_website
+WebsitePath: ~/Documents/website/mstetter.github.io

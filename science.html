@@ -19,14 +19,13 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -64,6 +63,9 @@ h5 {
 h6 {
   font-size: 12px;
 }
+.table th:not([align]) {
+  text-align: left;
+}
 </style>
 
 
@@ -92,6 +94,7 @@ button.code-folding-btn:focus {
   outline: none;
 }
 </style>
+
 
 <style type="text/css">
 /* padding for bootstrap navbar */
@@ -149,7 +152,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.0/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -234,9 +236,26 @@ $(document).ready(function () {
 </div>
 
 
-<p>My main interest is the population genetics of crop domestication</p>
-<p>From February 2017 I will be a PostDoc in the <a href="http://www.rilab.org/">Ross-Ibarra lab</a> at the University of California Davis.</p>
+<p>My main interest is the population genetics of crop domestication.</p>
+<p>Since February 2017 I am a postdoc in the <a href="http://www.rilab.org/">Ross-Ibarra lab</a> at the University of California Davis.</p>
 <p>I did my PhD in the group of <a href="http://evoplant.uni-hohenheim.de">Karl Schmid</a> at the University of Hohenheim. There I studied the evolution of the genus <em>Amaranthus</em> and domestication history of amaranth.</p>
+<div id="domestication-and-adaptation-in-modern-and-ancient-maize." class="section level1">
+<h1>Domestication and adaptation in modern and ancient maize.</h1>
+<p>Details coming soon</p>
+</div>
+<div id="domestication-genomics-of-amaranth" class="section level1">
+<h1>Domestication genomics of amaranth</h1>
+<p>The genus Amaranthus comprises several crop species that are potentially only partially domesticated. Additionally, grain amaranth seeds have a high nutritional value and the crop has high potential to contribute to human nutrition in the future. Together, these characteristics make the genus, and in particular grain amaranth, interesting models to study domestication, genome evolution and breeding methods.</p>
+<div class="figure">
+<img src="own_images/hyp_genome_fastAnc_with_BM.png" />
+
+</div>
+<p>Although grain amaranth has been cultivated for over 5,000 years and in the same regions as maize and other domesticated crops, the domestication syndrome is only weakly pronounced. Grain amaranth has tiny seeds that shatter and cultivated amaranth species do not have lower genetic diversity than their wild ancestors. Therefore, the genomic and phenotypic signatures of amaranth domestication differ from other, highly domesticated crops that originated from single domestication event. In contrast, the history of cultivated amaranth may include multiregional, multiple and incomplete domestication events with frequent and ongoing gene flow from sympatric relatives.</p>
+<div class="figure">
+<img src="own_images/map_dom_scenario.png" />
+
+</div>
+</div>
 
 
 
@@ -246,9 +265,13 @@ $(document).ready(function () {
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 

@@ -19,14 +19,13 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -64,6 +63,9 @@ h5 {
 h6 {
   font-size: 12px;
 }
+.table th:not([align]) {
+  text-align: left;
+}
 </style>
 
 
@@ -92,6 +94,7 @@ button.code-folding-btn:focus {
   outline: none;
 }
 </style>
+
 
 <style type="text/css">
 /* padding for bootstrap navbar */
@@ -149,7 +152,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.0/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -236,7 +238,7 @@ $(document).ready(function () {
 
 <p>While I am not a trained programmer, I started learning Python during my undergraduate studies. Since then I have been trying to improve and was interested in mobile app programming. I program my apps in python and kivy.</p>
 <div class="figure">
-<img src="own_images/cover_full.JPG" alt="" />
+<img src="own_images/cover_full.JPG" />
 
 </div>
 <p>PhenoType is my first large programming project. PhenoTpye is a digital field book allowing you to easily record data of experiments. It runs on Android devices and is therefore very flexible. To test PhenoType for free you can download PhenoType lite PhenoType lite PhenoType is efficient and easy to use. Just try. Another app from the PhenoType family is PhenoType Camera which is a camera app that allows you to name the image files the way you want. This makes it easier to keep track of you images.</p>
@@ -250,9 +252,13 @@ $(document).ready(function () {
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 
