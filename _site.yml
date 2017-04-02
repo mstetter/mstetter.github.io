@@ -23,7 +23,7 @@ navbar:
 output_dir: "."
 output:
   html_document:
-    theme: united
+    theme: spacelab
     highlight: textmate
     include:
  #     after_body: footer.html
