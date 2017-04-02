@@ -4,42 +4,60 @@ title: "Publications"
 ```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
 library(scholar)
 library(knitr)
-bob<-get_profile("yYKVZQQAAAAJ")
-#paste("{\\small H-Index ", bob$h_index, " (", bob$total_cites, " citations as of ", date(), ")}",sep="")
-bob<-get_publications("yYKVZQQAAAAJ")
+library(RefManageR)
+```
 
-my_pubs <- data.frame(bob$author,bob$year,bob$title,bob$journal,bob$cites)
-my_pubs <- my_pubs[order(my_pubs$bob.year,decreasing = T),]
-names(my_pubs) <- c('Authors','Year','Title','Journal','Citations*')
-kable(my_pubs,row.names = F)
+## Preprint
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+
+my_preprint <- ReadBib('preprints.bib')
+my_preprint <- as.data.frame(my_preprint)
+my_preprint$author <- "Markus G Stetter, Daniel J Gates, Wenbin Mei, Jeffrey Ross-Ibarra" 
+my_preprint$author <- gsub(my_preprint$author,pattern = 'Markus G Stetter',replacement = '**Markus G Stetter**')
+
+preprints <- paste(sep='',my_preprint$title,' ', my_preprint$author,' [preprint]','(http://dx.doi.org/',my_preprint$preprint,')')
+cat(preprints)
+cat('\n\n')
 
 ```
 
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+my_pubs <- ReadBib('publications.bib')
+#sort(my_pubs, sorting = "nyt")
+my_pubs <-GetDOIs(my_pubs)
+my_pubs <- as.data.frame(my_pubs)
 
-```{r,eval=FALSE,echo=FALSE}
-library(bibtex)
-file_journals <- ReadBib("journals.bib")
-dates <- unlist(unique(file_journals$year))[order(unlist(unique(file_journals$year)),decreasing = TRUE)]
+## add google scholar stats
+# scholar_profile<-get_profile("yYKVZQQAAAAJ")
 
-#Prints recerences
-for (date in dates) {
-  cat(paste0("##",date),"\n")
-  print(file_journals[list(year=date)],.opts = list(style="markdown",bib.style ="authoryear" ,max.names =10,dashed=FALSE))
-  cat("\n")
+# scholar_citations<-get_publications("yYKVZQQAAAAJ")
+# scholar_citations <- data.frame(scholar_citations$title,scholar_citations$cites)
+# names(scholar_citations) <- c('title','cites')
+# pubs_citations <- merge(my_pubs,scholar_citations,by = 'title',all.x = TRUE)
+
+pubs_citations <- my_pubs # comment this out when using google citation
+### make own name bold
+pubs_citations$author <- gsub(pubs_citations$author,pattern = 'Markus G Stetter',replacement = '**Markus G Stetter**')
+pubs_citations <- pubs_citations[order(pubs_citations$no,decreasing = T),]
+
+years <- unique(pubs_citations$year)
+for (y in years){
+year <- data.frame(subset(pubs_citations, year==y,drop = TRUE))
+cat(paste('##',y,sep=''))
+cat('\n\n')
+for (i in 1:length(year$title)){
+publications <- paste(sep='','[',year$title,']','(http://dx.doi.org/',year$doi,')',' ',year$author,'. *',year$journal,'*') # ,' Citations:',pubs_citations$cites)
+cat(publications[i])
+if (!is.na(year$preprint)){
+  cat(paste(sep='',' [preprint]','(http://dx.doi.org/',year$preprint[i],')'))
 }
+cat('\n\n')
+}
+}
+
 ```
 
 
-\* Data retrieved from google scholar
-
-```{r,eval=FALSE,echo=FALSE}
-## 2016
-# + **Stetter MG**, Benz M and Ludewig U. Increased root hair density by loss of WRKY6 in Arabidopsis thaliana (2016) PeerJ preprints
-# + **Stetter MG**, Mueller T and Schmid K, Incomplete domestication of South American grain amaranth (Amaranthus caudatus) from its wild relatives bioRxiv
-# + **Stetter MG**, Zeitler L, Steinhaus A, Kroener K, Biljecki M and Schmid K. Crossing methods and cultivation conditions for rapid production of segregating populations in three grain amaranth species (2016) Front. Plant Sci. 7:816
-# 
-# ##2015
-# + Vatter T, Neuhaeuser B, **Stetter MG** and Ludewig U, Regulation of length and density of Arabidopsis root hairs by ammonium and nitrate (2015) Journal of Plant Research 128,5:839-848
-# + **Stetter MG**, Schmid K and Ludewig U, Uncovering Genes and Ploidy Involved in the High Diversity in Root Hair Density, Length and Response to Local Scarce Phosphate in Arabidopsis thaliana (2015) PloS one 10, 3:e0120604
+```{r,echo=FALSE}
+#\* Data retrieved from google scholar
 ```
-
