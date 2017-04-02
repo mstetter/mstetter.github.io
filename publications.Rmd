@@ -15,7 +15,7 @@ my_preprint <- as.data.frame(my_preprint)
 my_preprint$author <- "Markus G Stetter, Daniel J Gates, Wenbin Mei, Jeffrey Ross-Ibarra" 
 my_preprint$author <- gsub(my_preprint$author,pattern = 'Markus G Stetter',replacement = '**Markus G Stetter**')
 
-preprints <- paste(sep='',my_preprint$title,' ', my_preprint$author,' [preprint]','(http://dx.doi.org/',my_preprint$preprint,')')
+preprints <- paste(sep='',my_preprint$title,' ', my_preprint$author,' [preprint]','(https://peerj.com/preprints/2902/)')
 cat(preprints)
 cat('\n\n')
 
