@@ -7,21 +7,9 @@ library(knitr)
 library(RefManageR)
 ```
 
-## Preprint
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
 
-my_preprint <- ReadBib('preprints.bib')
-my_preprint <- as.data.frame(my_preprint)
-my_preprint$author <- "Markus G Stetter, Daniel J Gates, Wenbin Mei, Jeffrey Ross-Ibarra" 
-my_preprint$author <- gsub(my_preprint$author,pattern = 'Markus G Stetter',replacement = '**Markus G Stetter**')
 
-preprints <- paste(sep='',my_preprint$title,' ', my_preprint$author,' [preprint]','(https://peerj.com/preprints/2902/)')
-cat(preprints)
-cat('\n\n')
-
-```
-
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=FALSE}
 my_pubs <- ReadBib('publications.bib')
 #sort(my_pubs, sorting = "nyt")
 my_pubs <-GetDOIs(my_pubs)
@@ -55,6 +43,83 @@ cat('\n\n')
 }
 }
 
+```
+
+
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+
+correct_author <- function(author_list,highlighted_author){
+# This function highlights the one author and makes a readable author list.
+  author_list <- gsub(author_list,pattern = highlighted_author,replacement = paste('**',highlighted_author,'**',sep=''))
+  author <- as.vector(unlist(strsplit(author_list, split=' and ')))
+  out <- paste(paste(author[1:length(author)-1], collapse=', '),author[length(author)],sep=' and ')
+  return(out)
+  }
+
+add_doi_links <- function(description,doi){
+  # Add links doi link to a field
+  if (!is.na(doi)){
+    paste(sep='','[',description,']','(http://dx.doi.org/',doi,')') 
+  }
+  else{NA}
+}
+
+
+#my_pubs$author <- lapply(X=my_pubs$author,highlighted_author, FUN=correct_author)
+#my_pubs$title <- mapply(add_doi_links,my_pubs$title,my_pubs$doi)
+#my_pubs$preprint <- mapply(add_doi_links,'Preprint',my_pubs$preprint)
+#my_pubs$journal <- gsub(my_pubs$journal,my_pubs$journal,paste('*',my_pubs$journal,'*',sep=''))
+
+make_output <- function(title,author,journal,preprint){
+  publication <- paste('*', title, "\n", author, journal)
+  if (!is.na(preprint)){
+  publication <- paste(publication, preprint)
+  }
+  publication
+  }
+
+```
+
+## Preprint
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+my_preprint <- ReadBib('preprints.bib')
+#my_preprint <-GetDOIs(my_preprint)
+my_preprint <- as.data.frame(my_preprint)
+my_preprint <- my_preprint[order(my_preprint$no,decreasing = TRUE),]
+my_preprint$preprint <- NA
+my_preprint$author <- "Stetter, Markus G and Gates, Daniel J and Mei, Wenbin and Ross-Ibarra, Jeffrey"
+
+for (i in 1:length(my_preprint$title)){
+  my_preprint$author[i] <- correct_author(my_preprint$author[i],'Markus G Stetter')
+  my_preprint$title[i] <- add_doi_links(my_preprint$title[i],my_preprint$doi[i])
+  my_preprint$preprint[i] <- add_doi_links('Preprint',my_preprint$preprint[i])
+  my_preprint$journal[i] <- gsub(my_preprint$journal[i],my_preprint$journal[i],paste('*',my_preprint$journal[i],'*',sep=''))
+  cat(make_output(my_preprint$title[i],my_preprint$author[i],my_preprint$journal[i],my_preprint$preprint[i]))
+  cat('\n\n')
+}
+```
+
+
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+my_pubs <- ReadBib('publications.bib')
+my_pubs <-GetDOIs(my_pubs)
+my_pubs <- as.data.frame(my_pubs)
+my_pubs <- my_pubs[order(my_pubs$no,decreasing = TRUE),]
+
+years <- unique(my_pubs$year)
+for (y in years){
+  year <- subset(my_pubs, year==y,drop = TRUE)
+  cat(paste('##',y,sep=''))
+  cat('\n\n')
+  for (i in 1:length(year$title)){
+    year$author[i] <- correct_author(year$author[i],'Markus G Stetter')
+    year$title[i] <- add_doi_links(year$title[i],year$doi[i])
+    year$preprint[i] <- add_doi_links('Preprint',year$preprint[i])
+    year$journal[i] <- gsub(year$journal[i],year$journal[i],paste('*',year$journal[i],'*',sep=''))
+    cat(make_output(year$title[i],year$author[i],year$journal[i],year$preprint[i]))
+    cat('\n\n')
+  }
+}
 ```
 
 
