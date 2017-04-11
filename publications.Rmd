@@ -87,7 +87,7 @@ my_preprint <- ReadBib('preprints.bib')
 my_preprint <- as.data.frame(my_preprint)
 my_preprint <- my_preprint[order(my_preprint$no,decreasing = TRUE),]
 my_preprint$preprint <- NA
-my_preprint$author <- "Stetter, Markus G and Gates, Daniel J and Mei, Wenbin and Ross-Ibarra, Jeffrey"
+my_preprint$author <- "Markus G Stetter, Daniel J Gates, Wenbin Mei and Jeffrey Ross-Ibarra"
 
 for (i in 1:length(my_preprint$title)){
   my_preprint$author[i] <- correct_author(my_preprint$author[i],'Markus G Stetter')
