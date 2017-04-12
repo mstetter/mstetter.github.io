@@ -1,15 +1,22 @@
 ---
 title: "Contact me"
 ---
+  
 
-Markus Stetter   
-mail: mgstetter@gmail.com  
-twitter: [\@mgstetter](https://twitter.com/mgstetter)  
-web: [mstetter@github.io](mstetter@github.io)  
-
-<div style="width:200px">
-![](own_images/me_2016.jpg)
+<div style="float: left">  
+</a><img src="own_images/me_2016.jpg" style="border:10px solid white"; width=200px>
 </div>
+
+**Markus Stetter**    
+Dept. of Plant Sciences  
+262 Robbins Hall, Mail Stop 4  
+University of California  
+One Shields Ave  
+Davis, CA 95616  
+mail: [mstetter(a)ucdavis.edu](mailto:mstetter@ucdavis.edu)  
+twitter: [\@mgstetter](https://twitter.com/mgstetter)  
+web: [mstetter@github.io](mstetter@github.io)
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -2,7 +2,7 @@
 title: "Markus Stetter"
 ---
 
-I am a scientist, programmer and amaranth breeder. Here I would like to give you some insights into my different projects.
+I am a scientist and amaranth breeder. On this website you can get some insights into my different projects.
 
 
 ```{r,echo=FALSE, eval=FALSE}

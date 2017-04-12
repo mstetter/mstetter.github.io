@@ -1,10 +1,12 @@
----
-title: "Publications"
----
+
+# Publications <a href="http://scholar.google.com/citations?user=yYKVZQQAAAAJ"><img src="own_images/scholar.png" style="width: 50px;"></a>
+
+
 ```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
 library(scholar)
 library(knitr)
 library(RefManageR)
+library(bibtex)
 ```
 
 
@@ -81,7 +83,7 @@ make_output <- function(title,author,journal,preprint){
 ```
 
 ## Preprint
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,,eval=FALSE}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,}
 my_preprint <- ReadBib('preprints.bib')
 #my_preprint <-GetDOIs(my_preprint)
 my_preprint <- as.data.frame(my_preprint)
@@ -100,9 +102,10 @@ for (i in 1:length(my_preprint$title)){
 ```
 
 
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=FALSE}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
 my_pubs <- ReadBib('publications.bib')
 my_pubs <-GetDOIs(my_pubs)
+write.bib(my_pubs,'test.bib')
 my_pubs <- as.data.frame(my_pubs)
 my_pubs <- my_pubs[order(my_pubs$no,decreasing = TRUE),]
 
