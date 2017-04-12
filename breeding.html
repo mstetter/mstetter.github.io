@@ -241,6 +241,40 @@ $(document).ready(function () {
 <img src="own_images/DSC_0020.jpg" />
 
 </div>
+<pre class="r"><code>library(shiny)
+
+
+createLink &lt;- function(val) {
+  sprintf(&#39;&lt;a href=&quot;https://www.google.com/#q=%s&quot; target=&quot;_blank&quot; class=&quot;btn btn-primary&quot;&gt;Info&lt;/a&gt;&#39;,val)
+}
+shinyApp(
+ui &lt;- fluidPage(  
+  titlePanel(&quot;Table with Links!&quot;),
+  sidebarLayout(
+    sidebarPanel(
+      h4(&quot;Click the link in the table to see
+         a google search for the car.&quot;)
+      ),
+    mainPanel(
+      dataTableOutput(&#39;table1&#39;)
+    )
+    )
+  ),
+
+server &lt;- function(input, output) {
+  
+  output$table1 &lt;- renderDataTable({
+    
+    my_table &lt;- cbind(rownames(mtcars), mtcars)
+    colnames(my_table)[1] &lt;- &#39;car&#39;
+    my_table$link &lt;- createLink(my_table$car)
+    return(my_table)
+    
+  }, escape = FALSE)
+},
+options = list(height = 500)
+)</code></pre>
+<div style="width: 100% ; height: 500px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

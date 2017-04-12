@@ -81,7 +81,7 @@ make_output <- function(title,author,journal,preprint){
 ```
 
 ## Preprint
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,,eval=FALSE}
 my_preprint <- ReadBib('preprints.bib')
 #my_preprint <-GetDOIs(my_preprint)
 my_preprint <- as.data.frame(my_preprint)
@@ -100,7 +100,7 @@ for (i in 1:length(my_preprint$title)){
 ```
 
 
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=FALSE}
 my_pubs <- ReadBib('publications.bib')
 my_pubs <-GetDOIs(my_pubs)
 my_pubs <- as.data.frame(my_pubs)
@@ -121,6 +121,8 @@ for (y in years){
   }
 }
 ```
+
+
 
 
 ```{r,echo=FALSE}
