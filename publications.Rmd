@@ -83,15 +83,14 @@ make_output <- function(title,author,journal,preprint){
 ```
 
 ## Preprint
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
 my_preprint <- ReadBib('preprints.bib')
 #my_preprint <-GetDOIs(my_preprint)
 my_preprint <- as.data.frame(my_preprint)
 my_preprint <- my_preprint[order(my_preprint$no,decreasing = TRUE),]
 my_preprint$preprint <- NA
-my_preprint$author <- "Markus G Stetter, Daniel J Gates, Wenbin Mei and Jeffrey Ross-Ibarra"
-
-for (i in 1:length(my_preprint$title)){
+#my_preprint$author <- "Markus G Stetter, Daniel J Gates, Wenbin Mei and Jeffrey Ross-Ibarra"
+for (i in 2:length(my_preprint$title)){
   my_preprint$author[i] <- correct_author(my_preprint$author[i],'Markus G Stetter')
   my_preprint$title[i] <- add_doi_links(my_preprint$title[i],my_preprint$doi[i])
   my_preprint$preprint[i] <- add_doi_links('Preprint',my_preprint$preprint[i])

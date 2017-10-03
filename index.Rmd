@@ -2,10 +2,16 @@
 title: "Markus Stetter"
 ---
 
+
 I am a scientist and amaranth breeder. On this website you can get some insights into my different projects.
 
+<div style="width:400px">
+![](own_images/me_2016.jpg)
+</div>
 
-```{r,echo=FALSE, eval=FALSE}
+```{r,echo=FALSE, eval=T}
+
+
 library(htmltools)
 thumbnail <- function(title, img, href, caption = TRUE) {
   div(class = "col-sm-3",
@@ -19,8 +25,8 @@ thumbnail <- function(title, img, href, caption = TRUE) {
 }
 ```
 
-```{r, echo=FALSE, eval=FALSE}
-thumbnail("Twitter", "own_images/me_2016.jpg", "https://twitter.com/mgstetter")
+```{r, echo=FALSE, eval=T}
+#thumbnail("Twitter", "own_images/me_2016.jpg", "https://twitter.com/mgstetter")
 thumbnail("Science", "own_images/hyp_genome_fastAnc_with_BM.png", "science.html")
 thumbnail("Breeding", "own_images/DSC_0020.jpg", "breeding.html")
 thumbnail("Programming", "own_images/phenotype.png", "programming.html")
@@ -28,9 +34,6 @@ thumbnail("Programming", "own_images/phenotype.png", "programming.html")
 ```
 
 
-<div style="width:400px">
-![](own_images/me_2016.jpg)
-</div>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

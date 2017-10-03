@@ -5,7 +5,7 @@ navbar:
     - text: "Home"
       href: index.html
       icon: fa-home
-    - text: "Science"
+    - text: "Research"
       icon: ion-university
       href: science.html
     - text: "Breeding"
