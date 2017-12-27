@@ -8,15 +8,15 @@ navbar:
     - text: "Research"
       icon: ion-university
       href: science.html
-    - text: "Breeding"
-      href: breeding.html
-      icon: ion-leaf
-    - text: "Programming"
-      href: programming.html
-      icon: ion-bug
     - text: "Publications"
       href: publications.html
       icon: ion-document-text
+    - text: "Breeding"
+      href: breeding.html
+      icon: ion-leaf
+    - text: "PhenoType"
+      href: programming.html
+      icon: ion-bug
     - text: "Contact"
       href: contact.html
       icon: ion-android-contact
