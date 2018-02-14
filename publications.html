@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
 
@@ -32,10 +32,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -185,8 +187,15 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="science.html">
+  <a href="about.html">
     <span class="ion ion-university"></span>
+     
+    About me
+  </a>
+</li>
+<li>
+  <a href="science.html">
+    <span class="ion ion-erlenmeyer-flask"></span>
      
     Research
   </a>
@@ -202,7 +211,7 @@ $(document).ready(function () {
   <a href="breeding.html">
     <span class="ion ion-leaf"></span>
      
-    Breeding
+    Domestication
   </a>
 </li>
 <li>
@@ -239,11 +248,14 @@ $(document).ready(function () {
 <h1>Publications <a href="http://scholar.google.com/citations?user=yYKVZQQAAAAJ"><img src="own_images/scholar.png" style="width: 50px;"></a></h1>
 <div id="preprint" class="section level2">
 <h2>Preprint</h2>
-<ul>
-<li><a href="http://dx.doi.org/10.1101/196501">Adaptation in plant genomes: bigger isn’t better, but it’s probably different</a> Wenbin Mei, <strong>Markus G Stetter</strong>, Daniel J Gates, Michelle Stitzer and Jeffrey Ross-Ibarra <em>bioRxiv</em></li>
-</ul>
 </div>
 <div id="section" class="section level2">
+<h2>2018</h2>
+<ul>
+<li><a href="http://dx.doi.org/10.1002/ajb2.1002">Adaptation in plant genomes: Bigger is different</a> Wenbin Mei, <strong>Markus G Stetter</strong>, Daniel J. Gates, Michelle C. Stitzer and Jeffrey Ross-Ibarra <em>American Journal of Botany</em> <a href="http://dx.doi.org/https://www.biorxiv.org/content/early/2017/10/10/196501">Preprint</a></li>
+</ul>
+</div>
+<div id="section-1" class="section level2">
 <h2>2017</h2>
 <ul>
 <li><p><a href="http://dx.doi.org/10.1016/j.cub.2017.06.048">How to make a domesticate</a> <strong>Markus G Stetter</strong>, Daniel J Gates, Wenbin Mei and Jeffrey Ross-Ibarra <em>Current Biology</em> <a href="http://dx.doi.org/10.7287/peerj.preprints.2902v1">Preprint</a></p></li>
@@ -252,13 +264,13 @@ $(document).ready(function () {
 <li><p><a href="http://dx.doi.org/10.1111/mec.13974">Genomic and phenotypic evidence for an incomplete domestication of South American grain amaranth (Amaranthus caudatus)</a> <strong>Markus G Stetter</strong>, Thomas Müller and Karl J Schmid <em>Molecular Ecology</em> <a href="http://dx.doi.org/10.1101/025866">Preprint</a></p></li>
 </ul>
 </div>
-<div id="section-1" class="section level2">
+<div id="section-2" class="section level2">
 <h2>2016</h2>
 <ul>
 <li><a href="http://dx.doi.org/10.3389/fpls.2016.00816">Crossing methods and cultivation conditions for rapid production of segregating populations in three grain amaranth species</a> <strong>Markus G Stetter</strong>, Leo Zeitler, Adrian Steinhaus, Karoline Kroener, Michelle Biljecki and Karl J Schmid <em>Frontiers in Plant Science</em> <a href="http://dx.doi.org/10.7287/peerj.preprints.1951v1">Preprint</a></li>
 </ul>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>2015</h2>
 <ul>
 <li><p><a href="http://dx.doi.org/10.1007/s10265-015-0733-8">Regulation of length and density of Arabidopsis root hairs by ammonium and nitrate</a> Thomas Vatter, Benjamin Neuhäuser, <strong>Markus G Stetter</strong> and Uwe Ludewig <em>Journal of plant research</em></p></li>

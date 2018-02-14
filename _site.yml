@@ -5,13 +5,16 @@ navbar:
     - text: "Home"
       href: index.html
       icon: fa-home
-    - text: "Research"
+    - text: "About me"
       icon: ion-university
+      href: about.html
+    - text: "Research"
+      icon: ion-erlenmeyer-flask
       href: science.html
     - text: "Publications"
       href: publications.html
       icon: ion-document-text
-    - text: "Breeding"
+    - text: "Domestication"
       href: breeding.html
       icon: ion-leaf
     - text: "PhenoType"

@@ -1,11 +1,6 @@
 ---
 title: "Science"
 ---
-My main interest is population and quantitative genetics of crop domestication and adaptation.
-
-Since February 2017 I am a postdoc in the [Ross-Ibarra lab](http://www.rilab.org/) at the University of California, Davis.
-
-I did my PhD in the group of [Karl Schmid](http://evoplant.uni-hohenheim.de) at the University of Hohenheim. There I studied the evolution of the genus *Amaranthus* and domestication history of amaranth. 
 
 # Polygenic adaptation.
 

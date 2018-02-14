@@ -12,7 +12,7 @@ Another app from the PhenoType family is PhenoType Camera which is a camera app 
 
 
 ![www.PhenoType-online.com](own_images/phenotype.png)
-To learn more about the PhenoType projects visit [www.PhenoType-online.com](http://www.PhenoType-online.com)
+To learn more about the PhenoType projects visit [the gogole play store](https://play.google.com/store/apps/details?id=com.phenotype.phenotype)
 
 
 <script>

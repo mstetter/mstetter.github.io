@@ -2,12 +2,20 @@
 title: "Markus Stetter"
 ---
 
-
-I am a scientist and amaranth breeder. On this website you can get some insights into my different projects.
-
-<div style="width:400px">
-![](own_images/me_2016.jpg)
+<div style="float: left">
+</a><img src="own_images/me_2016.jpg" style="border:10px solid white"; width=250px>
 </div>
+
+I am a postdoc in the [Ross-Ibarra lab](rilab.org) at UC Davis and study crop domestication as a model for rapid evolution.
+
+The domestication of crops happened on an evolutionary time scale in a very short time and we know what phenotypic traits were selected and what determined the fitness of a population. 
+
+My models to find out why and how plants can adapt to changing environments are grain amaranth and maize. The two plants are on the opposite spectrum of how domesticated – well adapted to human needs – they are. While maize the probably the most domesticated crop of all, amaranth behaves more like a wild plant.
+These two cases are interesting because the crops have been first cultivated in the same geographic region and around the same time. Hence, they had the same cultural chance to be domesticated, but only maize in fact was domesticated. 
+
+In my research, I apply population and quantitative genetics frameworks to genomic data to understand the basis of adaptation and possible constraints that can prevent a population to adapt. I use forward in time simulations and machine learning to study the adaptation of quantitative traits during domestication.  
+
+
 
 ```{r,echo=FALSE, eval=T}
 
@@ -25,7 +33,7 @@ thumbnail <- function(title, img, href, caption = TRUE) {
 }
 ```
 
-```{r, echo=FALSE, eval=T}
+```{r, echo=FALSE, eval=F}
 #thumbnail("Twitter", "own_images/me_2016.jpg", "https://twitter.com/mgstetter")
 thumbnail("Science", "own_images/hyp_genome_fastAnc_with_BM.png", "science.html")
 thumbnail("Breeding", "own_images/DSC_0020.jpg", "breeding.html")

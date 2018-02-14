@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
 
@@ -32,10 +32,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -185,8 +187,15 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="science.html">
+  <a href="about.html">
     <span class="ion ion-university"></span>
+     
+    About me
+  </a>
+</li>
+<li>
+  <a href="science.html">
+    <span class="ion ion-erlenmeyer-flask"></span>
      
     Research
   </a>
@@ -202,7 +211,7 @@ $(document).ready(function () {
   <a href="breeding.html">
     <span class="ion ion-leaf"></span>
      
-    Breeding
+    Domestication
   </a>
 </li>
 <li>
@@ -242,7 +251,7 @@ $(document).ready(function () {
 
 </div>
 <p>PhenoType is my first large programming project. PhenoTpye is a digital field book allowing you to easily record data of experiments. It runs on Android devices and is therefore very flexible. To test PhenoType for free you can download PhenoType lite PhenoType lite PhenoType is efficient and easy to use. Just try. Another app from the PhenoType family is PhenoType Camera which is a camera app that allows you to name the image files the way you want. This makes it easier to keep track of you images.</p>
-<p><img src="own_images/phenotype.png" alt="www.PhenoType-online.com" /> To learn more about the PhenoType projects visit <a href="http://www.PhenoType-online.com">www.PhenoType-online.com</a></p>
+<p><img src="own_images/phenotype.png" alt="www.PhenoType-online.com" /> To learn more about the PhenoType projects visit <a href="https://play.google.com/store/apps/details?id=com.phenotype.phenotype">the gogole play store</a></p>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
