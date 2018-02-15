@@ -82,9 +82,10 @@ make_output <- function(title,author,journal,preprint){
 
 ```
 
-## Preprint
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=FALSE}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=F}
 # Set eval to ture to add preprint
+cat("## Preprint\n")
+
 my_preprint <- ReadBib('preprints.bib')
 #my_preprint <-GetDOIs(my_preprint)
 my_preprint <- as.data.frame(my_preprint)
