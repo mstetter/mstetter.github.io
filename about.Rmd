@@ -5,13 +5,13 @@ title: "About me"
 ## Research experience
 
 - Since 2018 DFG Research Fellow - Department of Plant Sciences, University of California Davis, USA  
-    [Ross-Ibarra lab](rilab.org)
+    [Ross-Ibarra lab](http://rilab.org)
 - 2017 Postdoc - Department of Plant Sciences, University of California Davis, USA  
-    [Ross-Ibarra lab](rilab.org)
+    [Ross-Ibarra lab](http://rilab.org)
 - 11/2016 - 01/2017 Research Associate - Crop Biodiversity and Breeding Informatics, University of Hohenheim, Germany  
-    [Schmid lab](evoplant.uni-hohenheim.de)
+    [Schmid lab](http://evoplant.uni-hohenheim.de)
 - 2013 - 2016 PhD student - Crop Biodiversity and Breeding Informatics, University of Hohenheim, Germany   
-    [Schmid lab](evoplant.uni-hohenheim.de)
+    [Schmid lab](http://evoplant.uni-hohenheim.de)
 - 2011 - 2013 Master student - Institute of Plant Nutrition, University of Hohenheim, Germany  
   [Ludewig lab](https://scholar.google.de/citations?user=C9ANgTkAAAAJ&hl=en)
 
