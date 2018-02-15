@@ -1,6 +1,8 @@
 
 # Publications <a href="http://scholar.google.com/citations?user=yYKVZQQAAAAJ"><img src="own_images/scholar.png" style="width: 50px;"></a>
 
+&nbsp;
+&nbsp;
 
 ```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE}
 library(scholar)
