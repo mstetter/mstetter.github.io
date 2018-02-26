@@ -28,5 +28,6 @@ output:
   html_document:
     theme: spacelab
     highlight: textmate
-    include:
+    includes:
+#      in_header: custom_header.html
  #     after_body: footer.html
