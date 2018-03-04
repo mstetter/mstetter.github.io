@@ -23,11 +23,16 @@ navbar:
     - text: "Contact"
       href: contact.html
       icon: ion-android-contact
+  right:
+    - href: https://twitter.com/mgstetter
+      icon: ion-social-twitter
+    
 output_dir: "."
 output:
   html_document:
     theme: spacelab
+    css: style.css
     highlight: textmate
     includes:
-#      in_header: custom_header.html
+      in_header: custom_header.html
  #     after_body: footer.html

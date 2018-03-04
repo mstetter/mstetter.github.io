@@ -2,6 +2,10 @@
 title: "Markus Stetter"
 ---
 
+```{r echo=FALSE,eval=FALSE}
+shiny::includeHTML("custom_header.html")
+```
+
 <div style="float: left">
 </a><img src="own_images/me_2016.jpg" style="border:10px solid white"; width=250px>
 </div>
