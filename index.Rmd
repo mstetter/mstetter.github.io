@@ -12,12 +12,13 @@ shiny::includeHTML("custom_header.html")
 
 I am a postdoc in the [Ross-Ibarra lab](http://rilab.org) at UC Davis and study crop domestication as a model for rapid evolution.
 
-The domestication of crops happened on an evolutionary time scale in a very short time and we know what phenotypic traits were selected and what determined the fitness of a population. 
+Crop domestication happened, on an evolutionary time scale, in a very short time and we know what phenotypic traits were selected and what determined the fitness of a population. 
 
-My models to find out why and how plants can adapt to changing environments are grain amaranth and maize. The two plants are on the opposite spectrum of how domesticated – well adapted to human needs – they are. While maize the probably the most domesticated crop of all, amaranth behaves more like a wild plant.
-These two cases are interesting because the crops have been first cultivated in the same geographic region and around the same time. Hence, they had the same cultural chance to be domesticated, but only maize in fact was domesticated. 
+My models to find out why and how plants can adapt to changing environments are grain amaranth and maize. The two plants are on the opposite spectrum of how domesticated – well adapted to human needs – they are. While maize is the probably most domesticated crop of all, amaranth behaves more like a wild plant.
+These two cases are interesting, because the crops have been first cultivated in the same geographic region and around the same time. Hence, they had the same cultural chance to be domesticated, but only maize in fact was domesticated. 
 
-In my research, I apply population and quantitative genetics frameworks to genomic data to understand the basis of adaptation and possible constraints that can prevent a population to adapt. I use forward in time simulations and machine learning to study the adaptation of quantitative traits during domestication.  
+In my research, I apply population and quantitative genetics frameworks to genomic data to understand the basis of adaptation and possible constraints that can prevent adaptation. To study the theoretical complexity of polygenic adaptation of quantitative traits during domestication, I use forward in time simulations and machine learning.
+
 
 
 
