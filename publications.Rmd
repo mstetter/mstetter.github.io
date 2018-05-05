@@ -84,7 +84,7 @@ make_output <- function(title,author,journal,preprint){
 
 ```
 
-```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=F}
+```{r,results='asis',message=FALSE,warning=FALSE,echo=FALSE,eval=T}
 # Set eval to ture to add preprint
 cat("## Preprint\n")
 
