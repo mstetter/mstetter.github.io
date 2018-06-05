@@ -44,11 +44,11 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1} 
     slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 8000); // Change image every 2 seconds
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
 
-  var myPix = new Array("own_images/amarant_banner.jpg","own_images/labels_banner.jpg","own_images/flower_banner.jpg");
+  var myPix = new Array("own_images/amarant_banner.jpg","own_images/labels_banner.jpg","own_images/flower_banner.jpg","own_images/polygenic_banner.jpg");
 window.onload = shuffle(myPix);
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
