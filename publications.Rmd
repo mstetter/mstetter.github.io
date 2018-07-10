@@ -63,7 +63,7 @@ correct_author <- function(author_list,highlighted_author){
 add_doi_links <- function(description,doi){
   # Add links doi link to a field
   if (!is.na(doi)){
-    paste(sep='','[',description,']','(',doi,')') 
+    paste(sep='','[',description,']','(http://dx.doi.org/',doi,')') 
   }
   else{NA}
 }
@@ -120,7 +120,7 @@ for (y in years){
   for (i in 1:length(year$title)){
     year$author[i] <- correct_author(year$author[i],'Markus G Stetter')
     year$title[i] <- add_doi_links(year$title[i],year$doi[i])
-    year$preprint[i] <- add_doi_links('Preprint',year$preprint[i])
+    year$preprint[i] <- paste0('[Preprint](',year$preprint[i],')')
     year$journal[i] <- gsub(year$journal[i],year$journal[i],paste('*',year$journal[i],'*',sep=''))
     cat(make_output(year$title[i],year$author[i],year$journal[i],year$preprint[i]))
     cat('\n\n')
