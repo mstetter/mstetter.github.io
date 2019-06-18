@@ -38,7 +38,7 @@ year <- data.frame(subset(pubs_citations, year==y,drop = TRUE))
 cat(paste('##',y,sep=''))
 cat('\n\n')
 for (i in 1:length(year$title)){
-publications <- paste(sep='','[',year$title,']','(http://dx.doi.org/',year$doi,')',' ',year$author,'. *',year$journal,'*') # ,' Citations:',pubs_citations$cites)
+publications <- paste(sep='','[',year$title,']','(https://doi.org/',year$doi,')',' ',year$author,'. *',year$journal,'*') # ,' Citations:',pubs_citations$cites)
 cat(publications[i])
 if (!is.na(year$preprint)){
   cat(paste(sep='',' [preprint]','(',year$preprint[i],')'))
@@ -63,7 +63,7 @@ correct_author <- function(author_list,highlighted_author){
 add_doi_links <- function(description,doi){
   # Add links doi link to a field
   if (!is.na(doi)){
-    paste(sep='','[',description,']','(http://dx.doi.org/',doi,')') 
+    paste(sep='','[',description,']','(https://doi.org/',doi,')') 
   }
   else{NA}
 }
