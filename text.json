@@ -1,0 +1,69 @@
+[
+  {
+    "ISSN": "2167-9843",
+    "URL": "https://doi.org/10.7287/peerj.preprints.2902v1",
+    "author": [
+      {
+        "family": "Stetter",
+        "given": "Markus G"
+      },
+      {
+        "family": "Gates",
+        "given": "Daniel J"
+      },
+      {
+        "family": "Mei",
+        "given": "Wenbin"
+      },
+      {
+        "family": "Ross-Ibarra",
+        "given": "Jeffrey"
+      }
+    ],
+    "container-title": "PeerJ Preprints",
+    "id": "review2017domestication",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "keyword": "Domestication, Adaptation, Quantitative Genetics, Crop evolution",
+    "page": "e2902v1",
+    "title": "How to make a domesticate",
+    "type": "article-journal",
+    "volume": "5"
+  },
+  {
+    "author": [
+      {
+        "family": "Stetter",
+        "given": "Markus G"
+      },
+      {
+        "family": "Schmid",
+        "given": "Karl"
+      },
+      {
+        "family": "Ludewig",
+        "given": "Uwe"
+      }
+    ],
+    "container-title": "PLOS one",
+    "id": "gwas2015arabidopsis",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "page": "e0120604",
+    "publisher": "Public Library of Science",
+    "title": "Uncovering genes and ploidy involved in the high diversity in root hair density, length and response to local scarce phosphate in arabidopsis thaliana",
+    "type": "article-journal",
+    "volume": "10"
+  }
+]

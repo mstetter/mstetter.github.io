@@ -22,9 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
 <!-- Slideshow container -->
 <div class="slideshow-container" ></div>
@@ -149,9 +148,7 @@ h6 {
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -176,6 +173,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -190,7 +190,6 @@ body {
   padding-top: 57px;
   margin-top: -57px;
 }
-
 .section h2 {
   padding-top: 57px;
   margin-top: -57px;
@@ -210,6 +209,43 @@ body {
 .section h6 {
   padding-top: 57px;
   margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -231,19 +267,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -268,45 +370,10 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="about.html">
+  <a href="https://www.cropevolution.org/about.html">
     <span class="ion ion-university"></span>
      
     About me
-  </a>
-</li>
-<li>
-  <a href="science.html">
-    <span class="ion ion-erlenmeyer-flask"></span>
-     
-    Research
-  </a>
-</li>
-<li>
-  <a href="publications.html">
-    <span class="ion ion-document-text"></span>
-     
-    Publications
-  </a>
-</li>
-<li>
-  <a href="breeding.html">
-    <span class="ion ion-leaf"></span>
-     
-    Domestication
-  </a>
-</li>
-<li>
-  <a href="programming.html">
-    <span class="ion ion-bug"></span>
-     
-    PhenoType
-  </a>
-</li>
-<li>
-  <a href="contact.html">
-    <span class="ion ion-android-contact"></span>
-     
-    Contact
   </a>
 </li>
       </ul>
@@ -337,19 +404,13 @@ $(document).ready(function () {
 <p>In population genetics it has for long been assumed that hard selective sweeps are the predominant mode of adaptation. Hard sweeps result from the reduction of genetic diversity in neutral sites close to a new beneficial mutation that increase fast in frequency. In recent years it has become clearer that different patters play an important role in evolution and adaption. Soft sweeps that arise from standing genetic variation or multiple mutations with equal effects are more difficult to detect, but also assume that there are few loci of large effect leading to a phenotypic adaptation. A third mode of adaptation – polygenic adaptation – predicts that a trait is controlled by hundreds of loci of small effects that can lead strong phenotypic adaptation by minor shifts in allele frequencies.</p>
 <p>Although well studied traits such as human height, bristle number in Drosophila and grain yield in crops have been identified to follow a polygenic pattern, the genetic architecture of quantitative trait adaptation under changing demographies is not well understood.</p>
 <p>I study how quantitative traits adapt to changing environments employing forward in time simulations. Understanding how simulated populations adapt to changing environments is important to be able to breed better crops for changing climate and to protect wild populations from extinction. Simulated populations allow to study the change of trait values over time and each mutation observing its allele frequency change.</p>
-<div class="figure">
-<img src="own_images/single_sim_trait_allele.png" />
-
-</div>
+<p><img src="own_images/single_sim_trait_allele.png" /></p>
 <p>Crop domestication is a well-suited model to study polygenic adaptation, because strong selection shaped the phenotype of crops in evolutionary short time. Additionally, for many crops, such as maize, phenotype and genotype data is available for a large number of individuals over many generations.</p>
 </div>
 <div id="domestication-genomics-of-amaranth" class="section level1">
 <h1>Domestication genomics of amaranth</h1>
 <p>The genus Amaranthus comprises several crop species that are potentially only partially domesticated. Additionally, grain amaranth seeds have a high nutritional value and the crop has high potential to contribute to human nutrition in the future. Together, these characteristics make the genus, and in particular grain amaranth, interesting models to study domestication, genome evolution and breeding methods.</p>
-<div class="figure">
-<img src="own_images/hyp_genome_fastAnc_with_BM.png" />
-
-</div>
+<p><img src="own_images/hyp_genome_fastAnc_with_BM.png" /></p>
 <p>Although grain amaranth has been cultivated for over 5,000 years and in the same regions as maize and other domesticated crops, the domestication syndrome is only weakly pronounced. Grain amaranth has tiny seeds that shatter and cultivated amaranth species do not have lower genetic diversity than their wild ancestors. Therefore, the genomic and phenotypic signatures of amaranth domestication differ from other, highly domesticated crops that originated from single domestication event. In contrast, the history of cultivated amaranth may include multiregional, multiple and incomplete domestication events with frequent and ongoing gene flow from sympatric relatives.</p>
 <img src="own_images/map_dom_scenario.png" />
 <script>
